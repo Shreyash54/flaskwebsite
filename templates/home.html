@@ -1,0 +1,86 @@
+<!DOCTYPE>
+<html>
+  <head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </head>
+  <title>
+    hello
+  </title>
+    <style>
+      h1{
+        font-family:ROBOTO;
+        text-align:center;
+        font-weight:normal;
+        color:rgb(45,45,45);
+      }
+      .p{
+        font-family:roboto
+      }
+
+      #banner{
+        width:100%;
+        height:360px;
+        object-fit:absolute;
+        
+      }
+
+      #container {
+        max-width: 720px;
+        margin : 0 auto ;
+      }
+    </style>
+  </head>
+  <body> 
+    <div  id="container">
+      <h1 class="mt-3 mb-4" >
+       {{companyname}} SHREYASH
+      </h1>
+        <img id="banner" src="https://images.unsplash.com/photo-1682402178953-f2cb484d4024?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" height="320px" >
+        
+      <h1 class="mt-3 mb-4">
+  HELLO SHREYASH
+      </h1>
+      <p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+
+      <h1>
+        OPEN POSITON
+      </h1>
+      <div>
+      {% for job in jobs %}
+     <div class="border-bottom row" style="margin-bottom:16px; padding-bottom:8px; ">
+       <div class ="col-10">
+       <h4 style="color:rgb(120,120,120,120) margin-bottom:4px; ">{{job['title']}} 
+       </h4>
+         <div>
+           <b>Location:</b>{{job['location']}}
+         </div>
+        
+        <div>  Salary:{{job['salary']}}</div>
+        </div>
+        <div class="col-2">
+        <button type="button" class="btn btn-primary"> APPLY</button></div>
+     </div>
+        
+      {% endfor %}
+    </div>
+    
+      
+      <div style="text-align:center;">
+        <button class="btn btn-secondary">
+      CONTACT US
+    </button>
+    
+    <p>
+      copyright@2023 ,Shreyash
+    </p>
+      </div>
+        </div>
+
+  </body>
+</html>
+ 
